@@ -1,11 +1,23 @@
-import { Flex, Heading } from '@chakra-ui/core'
+import { Flex, Heading, useColorMode } from '@chakra-ui/core'
 
-export const Hero = ({ title }: { title: string }) => (
-  <Flex justifyContent="center" alignItems="center" height="100vh">
-    <Heading fontSize="6vw">{title}</Heading>
-  </Flex>
-)
+export const Hero = ({ text }: { text: string }) => {
+  const { colorMode } = useColorMode()
+  const isDark = colorMode === 'dark'
+  return (
+    <Flex
+      justifyContent="center"
+      alignItems="center"
+      height="25rem"
+      bgColor={isDark ? 'green.300' : 'green.500'}
+      width="100vw"
+    >
+      <Heading color={isDark ? 'black' : 'white'} fontSize="4vw">
+        {text}
+      </Heading>
+    </Flex>
+  )
+}
 
 Hero.defaultProps = {
-  title: 'with-chakra-ui-typescript',
+  text: 'Enterprise Eleven',
 }

@@ -1,55 +1,43 @@
-import {
-  Link as ChakraLink,
-  Text,
-  Code,
-  List,
-  ListIcon,
-  ListItem,
-} from '@chakra-ui/core'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+import { Stack, Text, Heading } from '@chakra-ui/core'
 
 import { Hero } from '../components/Hero'
 import { Container } from '../components/Container'
-import { Main } from '../components/Main'
-import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { CTA } from '../components/CTA'
-import { Footer } from '../components/Footer'
+import { NavBar } from '../components/NavBar'
 
 const Index = () => (
   <Container height="100vh">
-    <Hero />
-    <Main>
-      <Text>
-        Example repository of <Code>Next.js</Code> + <Code>chakra-ui</Code> +{' '}
-        <Code>typescript</Code>.
-      </Text>
-
-      <List spacing={3} my={0}>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
-          >
-            Chakra UI <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
-    </Main>
-
-    <DarkModeSwitch />
-    <Footer>
-      <Text>Next ❤️ Chakra</Text>
-    </Footer>
-    <CTA />
+    <NavBar />
+    <Hero text="We can take your team to the next level." />
+    <Stack
+      spacing="10rem"
+      width="75%"
+      pt="8rem"
+      px="1rem"
+      direction="row"
+      justifyContent="center"
+    >
+      <Stack width="22rem" alignItems="center">
+        <Heading size="xl">Contracting</Heading>
+        <Text alignItems="center">
+          We can help you with short term needs by supplementing your team. We
+          have experience in React, Node, and many SQL and NoSQL databases.
+        </Text>
+      </Stack>
+      <Stack width="22rem" alignItems="center">
+        <Heading>Mentoring</Heading>
+        <Text>
+          Need help bringing your team up to speed? We've got you - we can level
+          up your team in a technology or stack.
+        </Text>
+      </Stack>
+      <Stack width="22rem" alignItems="center">
+        <Heading>MVP / POC</Heading>
+        <Text>
+          Need to get an idea out quickly? Running short on web developer
+          bandwidth for that new project? Bring us on to get that ball rolling.
+        </Text>
+      </Stack>
+    </Stack>
   </Container>
 )
 
