@@ -1,6 +1,5 @@
 import React from 'react'
-import { Stack, Flex, Text, Button } from '@chakra-ui/react'
-import Image from 'next/image'
+import { Stack, Flex, Text, Button, Image } from '@chakra-ui/react'
 import Link from 'next/link'
 import { Proficiency } from '../components/Proficiency'
 
