@@ -1,20 +1,39 @@
-import { Box, Stack, Link as ChakraLink } from '@chakra-ui/core'
+import React from 'react'
+import { Box, Stack, Link as ChakraLink } from '@chakra-ui/react'
 import Link from 'next/link'
-import { DarkModeSwitch } from './DarkModeSwitch'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
 
-export const NavBar = () => (
-  <Box w="100%" p={4} d="flex" justifyContent="space-between">
-    <Link href="/">
-      <ChakraLink>Enterprise Eleven</ChakraLink>
-    </Link>
-    <Stack direction="row" spacing={4}>
-      <Link href="/about">
-        <ChakraLink>About Us</ChakraLink>
+export const NavBar = () => {
+  const router = useRouter()
+
+  return (
+    <Box d="flex" justifyContent="space-between" alignItems="center">
+      <Link href="/">
+        <Image src="/images/brand.svg" height={145} width={139} />
       </Link>
-      <Link href="/contact">
-        <ChakraLink>Contact Us</ChakraLink>
-      </Link>
-      <DarkModeSwitch />
-    </Stack>
-  </Box>
-)
+      <Stack direction="row" spacing={24} paddingRight="24px">
+        <Link href="/about">
+          <ChakraLink variant={router.pathname === '/about' ? 'active' : ''}>
+            About
+          </ChakraLink>
+        </Link>
+        <Link href="/work">
+          <ChakraLink variant={router.pathname === '/work' ? 'active' : ''}>
+            Work
+          </ChakraLink>
+        </Link>
+        <Link href="/blog">
+          <ChakraLink variant={router.pathname === '/blog' ? 'active' : ''}>
+            Blog
+          </ChakraLink>
+        </Link>
+        <Link href="/contact">
+          <ChakraLink variant={router.pathname === '/contact' ? 'active' : ''}>
+            Contact
+          </ChakraLink>
+        </Link>
+      </Stack>
+    </Box>
+  )
+}
