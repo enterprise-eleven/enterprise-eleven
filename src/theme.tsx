@@ -63,6 +63,13 @@ const components = {
       },
     },
   },
+  Text: {
+    variants: {
+      bright: {
+        color: 'brand.brightSage',
+      },
+    },
+  },
 }
 
 const theme = extendTheme({ colors, fonts, styles, components })
