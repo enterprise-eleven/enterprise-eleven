@@ -2,6 +2,7 @@ import React from 'react'
 import { Stack, Flex, Text, Button, Image } from '@chakra-ui/react'
 import Link from 'next/link'
 import { Proficiency } from '../components/Proficiency'
+import { DotDashes } from '../components/DotDashes'
 
 const Index = () => (
   <Stack pt="150px" direction="column" alignItems="flex-start">
@@ -28,7 +29,7 @@ const Index = () => (
       </Text>
       <Flex flex="2" />
       <Flex flex="2" marginRight="-75px" paddingBottom="75px">
-        <Image src="/images/dotDashes.svg" width={409} height={644} />
+        <DotDashes />
       </Flex>
     </Stack>
     <Flex padding="75px 0 175px 0">
@@ -85,7 +86,7 @@ const Index = () => (
       width="100%"
     >
       <Flex flex="2" marginLeft="-75px" paddingBottom="75px">
-        <Image src="/images/dotDashes.svg" width={409} height={644} />
+        <DotDashes />
       </Flex>
       <Flex flex="1" />
       <Stack flex="5" paddingTop="75px" direction="column">
