@@ -18,9 +18,9 @@ export const Footer = () => (
       <Link href="/work">
         <ChakraLink variant="footer">Work</ChakraLink>
       </Link>
-      <Link href="/blog">
-        <ChakraLink variant="footer">Blog</ChakraLink>
-      </Link>
+      {/*<Link href="/blog">*/}
+      {/*  <ChakraLink variant="footer">Blog</ChakraLink>*/}
+      {/*</Link>*/}
       <Link href="/contact">
         <ChakraLink variant="footer">Contact</ChakraLink>
       </Link>

@@ -22,11 +22,11 @@ export const NavBar = () => {
             Work
           </ChakraLink>
         </Link>
-        <Link href="/blog">
-          <ChakraLink variant={router.pathname === '/blog' ? 'active' : ''}>
-            Blog
-          </ChakraLink>
-        </Link>
+        {/*<Link href="/blog">*/}
+        {/*  <ChakraLink variant={router.pathname === '/blog' ? 'active' : ''}>*/}
+        {/*    Blog*/}
+        {/*  </ChakraLink>*/}
+        {/*</Link>*/}
         <Link href="/contact">
           <ChakraLink variant={router.pathname === '/contact' ? 'active' : ''}>
             Contact
